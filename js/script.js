@@ -25,7 +25,7 @@ FB.getLoginStatus(function(response) {
   } else if (response.status === 'not_authorized') {
     //要求使用者登入，索取publish_actions權限
     	FB.login(function (response) {
-            // FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
+             FB.api('/me/feed', 'post', {message: 'I\'m started using FB API'});
             if (response.authResponse) { // if user login to your apps right after handle an event
                 window.location.reload();
             };
