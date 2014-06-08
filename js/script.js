@@ -16,8 +16,8 @@ FB.init({
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     //呼叫api把圖片放到#preview IMG tag 內
+        console.log(response);
     	FB.api('/me/picture?type=normal', function(response) {
-            console.log(response);
 			var str="<img id='preview1' crossOrigin='Anonymous' src="+ response.data.url +">";
 			$('body').append(str);
 		});
